@@ -182,11 +182,11 @@ public class ContainerCloudSimExample1 {
              */
             CloudSim.terminateSimulation(86400.00);
             /**
-             * 13- Starting the simualtion.
+             * 13- Starting the simulation.
              */
             CloudSim.startSimulation();
             /**
-             * 14- Stopping the simualtion.
+             * 14- Stopping the simulation.
              */
             CloudSim.stopSimulation();
             /**
