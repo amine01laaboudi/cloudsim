@@ -400,7 +400,7 @@ public class ContainerDatacenterBroker extends SimEntity {
         getCloudletReceivedList().add(cloudlet);
         Log.printConcatLine(CloudSim.clock(), ": ", getName(), ": Cloudlet ", cloudlet.getCloudletId(),
                 " returned");
-        Log.printConcatLine(CloudSim.clock(), ": ", getName(), "The number of finished Cloudlets is:", getCloudletReceivedList().size());
+        Log.printConcatLine(CloudSim.clock(), ": ", getName(), ": The number of finished Cloudlets is:", getCloudletReceivedList().size());
         cloudletsSubmitted--;
         if (getCloudletList().size() == 0 && cloudletsSubmitted == 0) { // all cloudlets executed
             Log.printConcatLine(CloudSim.clock(), ": ", getName(), ": All Cloudlets executed. Finishing...");
@@ -408,8 +408,8 @@ public class ContainerDatacenterBroker extends SimEntity {
             finishExecution();
         } else { // some cloudlets haven't finished yet
             if (getCloudletList().size() > 0 && cloudletsSubmitted == 0) {
-                // all the cloudlets sent finished. It means that some bount
-                // cloudlet is waiting its VM be created
+                // all the cloudlets sent finished. This means that some bount
+                // cloudlet is waiting for its VM to be created
                 clearDatacenters();
                 createVmsInDatacenter(0);
             }
